@@ -27,6 +27,7 @@
             --white-color: #ffffff;
             --gray-color: #95a5a6;
             --light-gray: #f8f9fa;
+            --secondary: #E63946;
         }
         
         body {
@@ -75,30 +76,67 @@
         }
         
         /* Navbar */
-        .navbar {
-            padding: 20px 0;
-            transition: all 0.3s ease;
+         /* Navbar */
+         .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            transition: all 0.4s ease;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
         }
         
         .navbar-brand img {
-            height: 50px;
+            height: 90px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            transition: all 0.3s;
         }
         
-        .navbar-scrolled {
-            background-color: var(--white-color);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
+        .navbar-brand:hover img {
+            transform: scale(1.05);
         }
         
         .nav-link {
-            font-weight: 500;
-            margin: 0 10px;
-            color: var(--secondary-color);
-            transition: color 0.3s;
+            color: var(--primary) !important;
+            font-weight: 600;
+            margin: 0 12px;
+            position: relative;
+            transition: all 0.3s;
+            padding: 8px 0;
         }
         
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-color);
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link.active {
+            color: var(--secondary) !important;
         }
         
         /* Hero Section */
@@ -837,14 +875,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.php#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php#why-us">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php#appointment">Appointment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.php">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#appointment">Appointment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a href="index.php#appointment" class="btn btn-custom">
+                        <a href="#appointment" class="btn btn-custom">
                             <i class="fas fa-calendar-check btn-icon"></i> Book Now
                         </a>
                     </li>
@@ -1065,7 +1103,7 @@
     </section>
 
     <!-- Leadership Team Section -->
-    <section class="section team-section">
+    <!-- <section class="section team-section">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="section-title" data-aos="fade-up">Our <span>Leadership</span> Team</h2>
@@ -1128,7 +1166,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- CTA Section -->
     <section class="cta-section">

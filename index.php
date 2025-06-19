@@ -133,6 +133,10 @@
             color: var(--secondary) !important;
         }
         
+
+        option{
+            color:black;
+        }
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -1292,12 +1296,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.php">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#appointment">Appointment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                         <a href="#appointment" class="btn btn-custom">
                             <i class="fas fa-calendar-check btn-icon"></i> Book Now

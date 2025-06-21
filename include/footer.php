@@ -9,10 +9,10 @@
                     </div>
                     <p class="footer-about">WellnessWheel is India's leading at-home diagnostic service provider, delivering accurate and timely health testing with utmost convenience.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://facebook.com/wellnesswheel.in"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://instagram.com/wellnesswheel.in"><i class="fab fa-instagram"></i></a>
+                        <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-2 mb-4">
@@ -57,5 +57,52 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp & Call Icons -->
+<div class="floating-icons">
+  <a href="https://wa.me/+918076780562" class="whatsapp-icon" target="_blank" title="Chat on WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+  <a href="tel:+918076780562" class="call-icon" title="Call Now">
+    <img src="https://img.icons8.com/color/48/000000/phone--v1.png" alt="Call">
+  </a>
+</div>
+
+<style>
+    .floating-icons {
+  position: fixed;
+  left: 10px;
+  bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.floating-icons a {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.floating-icons a:hover {
+  transform: scale(1.1);
+}
+
+.call-icon img {
+  animation: shake 1.2s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+</style>
 
    

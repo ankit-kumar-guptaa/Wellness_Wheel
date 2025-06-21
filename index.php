@@ -1390,7 +1390,7 @@
                                 <li>Tests covering 40-60 allergens</li>
                                 <li>Free home collection</li>
                             </ul>
-                            <div class="service-price">₹2,999 - ₹4,999 <span>/ panel</span></div>
+                            <div class="service-price">Starting at ₹2,999 - ₹4,999 <span>/ panel</span></div>
                             <a href="#appointment" class="btn btn-custom w-100">
                                 <i class="fas fa-calendar-check btn-icon"></i> Book Now
                             </a>
@@ -1553,7 +1553,7 @@
                                 <!-- <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Mrs. Gupta" class="testimonial-author-img"> -->
                                 <div>
                                     <div class="testimonial-author">Mrs. Anjali Gupta</div>
-                                    <div class="testimonial-location">Mumbai, India</div>
+                                    <div class="testimonial-location">Delhi NCR, India</div>
                                     <div class="testimonial-rating">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -1572,7 +1572,7 @@
                                 <!-- <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Mr. Singh" class="testimonial-author-img"> -->
                                 <div>
                                     <div class="testimonial-author">Mr. Vikram Singh</div>
-                                    <div class="testimonial-location">Bengaluru, India</div>
+                                    <div class="testimonial-location">New Delhi, India</div>
                                     <div class="testimonial-rating">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -1595,7 +1595,7 @@
         <div class="container">
             <h2 class="section-title text-center mb-5" data-aos="fade-up">Our <span>Impact</span></h2>
             <div class="row">
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="stat-item">
                         <div class="stat-icon"><i class="fas fa-users"></i></div>
                         <div class="stat-number count-up">5,000+</div>
@@ -1603,7 +1603,7 @@
                         <div class="stat-description">Satisfied customers who trust our services</div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="stat-item">
                         <div class="stat-icon"><i class="fas fa-vial"></i></div>
                         <div class="stat-number count-up">10,000+</div>
@@ -1611,15 +1611,15 @@
                         <div class="stat-description">Accurate diagnostics delivered with care</div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <!-- <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="stat-item">
                         <div class="stat-icon"><i class="fas fa-city"></i></div>
                         <div class="stat-number count-up">50+</div> <br>
                         <div class="stat-title">Cities Covered</div>
                         <div class="stat-description">Expanding our reach across India</div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                </div> -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="stat-item">
                         <div class="stat-icon"><i class="fas fa-user-md"></i></div>
                         <div class="stat-number count-up">500+</div>

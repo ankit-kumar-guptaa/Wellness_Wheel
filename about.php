@@ -863,38 +863,13 @@
         </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="logo.png" alt="WellnessWheel Logo" class="img-fluid">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link " href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.php">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#appointment">Appointment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a href="#appointment" class="btn btn-custom">
-                            <i class="fas fa-calendar-check btn-icon"></i> Book Now
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <?php include "include/header.php"?>
 
     <!-- About Hero Section -->
     <section class="about-hero-section">
         <div class="container">
-            <h1 class="about-hero-title" data-aos="fade-up">About <span>WellnessWheel</span></h1>
+            <h1 class="about-hero-title mt-5" data-aos="fade-up">About <span>WellnessWheel</span></h1>
             <p class="about-hero-subtitle" data-aos="fade-up" data-aos-delay="100">Revolutionizing healthcare accessibility with premium at-home diagnostic services across India</p>
             <a href="index.php#appointment" class="btn btn-custom" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-calendar-check btn-icon"></i> Book a Test
@@ -1187,65 +1162,9 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="footer-logo">
-                        <img src="logo.png" alt="WellnessWheel Logo" class="footer-logo-img">
-                        <div class="footer-logo-text">Wellness<span>Wheel</span></div>
-                    </div>
-                    <p class="footer-about">WellnessWheel is India's leading at-home diagnostic service provider, delivering accurate and timely health testing with utmost convenience.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-2 mb-4">
-                    <h5 class="footer-heading">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.php#home">Home</a></li>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="index.php#services">Services</a></li>
-                        <li><a href="index.php#careers">Careers</a></li>
-                        <li><a href="index.php#appointment">Book Appointment</a></li>
-                        <li><a href="index.php#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="footer-heading">Our Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.php#services">Blood Tests</a></li>
-                        <li><a href="index.php#services">Neurological Tests</a></li>
-                        <li><a href="index.php#services">Cardiac Tests</a></li>
-                        <li><a href="index.php#services">Pulmonary Tests</a></li>
-                        <li><a href="index.php#services">Sleep Studies</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="footer-heading">Contact Us</h5>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="footer-contact-text">D-1/147 New Kondli Mayur Vihar Phase 3 , Delhi 110096</div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="footer-contact-text"><a href="tel:+918076780562">+91-8076780562</a></div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="footer-contact-text"><a href="mailto:support@wellnesswheel.in">support@wellnesswheel.in</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2025 WellnessWheel Diagnostics. All Rights Reserved. Designed by <a href="#">Team Wellness</a>
-            </div>
-        </div>
-    </footer>
-
+       <!-- Footer Section -->
+       <?php include "include/footer.php"?>
+       
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 

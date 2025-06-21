@@ -69,121 +69,42 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
-        
-        /* Navbar */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 15px 0;
-            transition: all 0.4s ease;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-        }
-        
-        .navbar.scrolled {
-            padding: 10px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-        }
-        
-        .navbar-brand img {
-            height: 90px;
-            width: auto;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-            transition: all 0.3s;
-        }
-        
-        .navbar-brand:hover img {
-            transform: scale(1.05);
-        }
-        
-        .nav-link {
-            color: var(--primary) !important;
-            font-weight: 600;
-            margin: 0 12px;
+
+         
+        /* Hero Section */
+        .career-hero-section {
             position: relative;
-            transition: all 0.3s;
-            padding: 8px 0;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            background: var(--secondary);
-            bottom: 0;
-            left: 0;
-            border-radius: 10px;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: var(--secondary) !important;
-        }
-        
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
-        }
-        
-        .nav-link.active {
-            color: var(--secondary) !important;
-        }
-        
-        /* Breadcrumb */
-        .breadcrumb-section {
-            background: linear-gradient(rgba(26, 60, 108, 0.8), rgba(26, 60, 108, 0.9)), 
-                        url('https://images.unsplash.com/photo-1576091160550-2173fdabe9c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
-            padding: 120px 0 50px;
-            position: relative;
+            padding: 180px 0 100px;
+            background: linear-gradient(rgba(26, 60, 108, 0.85), rgba(26, 60, 108, 0.9)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
             color: white;
+            text-align: center;
         }
         
-        .breadcrumb-section::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyODAgMTQwVjBTOTkzLjQ2IDE0MCA2NDAgMTM5IDAgMCAwIDB2MTQweiIvPjwvZz48L3N2Zz4=');
-            background-size: 100% 100px;
-            z-index: 1;
+        .breadcrumb-section {
+            background-color: var(--light);
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
         
-        .breadcrumb-title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-        
-        .breadcrumb-nav {
-            background: transparent;
-            padding: 0;
-            margin: 0;
+        .breadcrumb {
+            margin-bottom: 0;
         }
         
         .breadcrumb-item a {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--primary);
             text-decoration: none;
-            transition: all 0.3s;
+            transition: color 0.3s;
         }
         
         .breadcrumb-item a:hover {
-            color: white;
+            color: var(--secondary);
         }
         
         .breadcrumb-item.active {
             color: var(--secondary);
         }
         
-        .breadcrumb-item + .breadcrumb-item::before {
-            color: rgba(255, 255, 255, 0.6);
-        }
         
         /* Contact Section */
         .contact-section {
@@ -629,7 +550,7 @@
         
         @media (max-width: 767px) {
             .breadcrumb-section {
-                padding: 100px 0 40px;
+                padding: 0px 0 40px;
             }
             
             .breadcrumb-title {
@@ -659,6 +580,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -671,49 +593,33 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="logo.png" alt="WellnessWheel Logo" class="img-fluid">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php#why-us">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php#appointment">Appointment</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.php">Contact</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a href="index.php#appointment" class="btn btn-custom">
-                            <i class="fas fa-calendar-check btn-icon"></i> Book Now
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+     <!-- Navbar -->
+     <?php include "include/header.php"?>
 
     <!-- Breadcrumb Section -->
-    <section class="breadcrumb-section">
+         <!-- Hero Section -->
+    <section class="career-hero-section mt-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center" data-aos="fade-up">
-                    <h1 class="breadcrumb-title">Contact Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center breadcrumb-nav">
-                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                        </ol>
-                    </nav>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h1 class="hero-title mb-4">Contact Us</h1>
+                    <!-- <p class="hero-subtitle">Be part of a team that's transforming healthcare delivery in India. Explore exciting career opportunities with WellnessWheel.</p> -->
                 </div>
             </div>
         </div>
     </section>
+     <!-- Breadcrumb -->
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Careers</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
 
     <!-- Contact Info Section -->
     <section class="contact-section">
@@ -840,64 +746,8 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="footer-logo">
-                        <img src="logo.png" alt="WellnessWheel Logo" class="footer-logo-img">
-                        <div class="footer-logo-text">Wellness<span>Wheel</span></div>
-                    </div>
-                    <p class="footer-about">WellnessWheel is India's leading at-home diagnostic service provider, delivering accurate and timely health testing with utmost convenience.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-2 mb-4">
-                    <h5 class="footer-heading">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="index.php#services">Services</a></li>
-                        <li><a href="index.php#careers">Careers</a></li>
-                        <li><a href="index.php#appointment">Book Appointment</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="footer-heading">Our Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.php#services">Blood Tests</a></li>
-                        <li><a href="index.php#services">Neurological Tests</a></li>
-                        <li><a href="index.php#services">Cardiac Tests</a></li>
-                        <li><a href="index.php#services">Pulmonary Tests</a></li>
-                        <li><a href="index.php#services">Sleep Studies</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="footer-heading">Contact Us</h5>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="footer-contact-text">D-1/147 New Kondli Mayur Vihar Phase 3 , Delhi 110096</div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="footer-contact-text"><a href="tel:+918076780562">+91-8076780562</a></div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="footer-contact-text"><a href="mailto:support@wellnesswheel.in">support@wellnesswheel.in</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2025 WellnessWheel Diagnostics. All Rights Reserved. Designed by <a href="#">Team Wellness</a>
-            </div>
-        </div>
-    </footer>
+      <!-- Footer Section -->
+      <?php include "include/footer.php"?>
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>

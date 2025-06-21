@@ -912,6 +912,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -924,34 +925,10 @@
     </div> -->
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="logo.png" alt="WellnessWheel Logo" class="img-fluid">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.php">Services</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="career.php">Careers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a href="#apply-now" class="btn btn-custom">
-                            <i class="fas fa-paper-plane btn-icon"></i> Apply Now
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include "include/header.php"?>
 
     <!-- Hero Section -->
-    <section class="career-hero-section">
+    <section class="career-hero-section mt-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center" data-aos="fade-up">
@@ -1329,79 +1306,8 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <div class="footer-logo">
-                        <img src="logo.png" alt="WellnessWheel Logo" class="footer-logo-img">
-                        <div class="footer-logo-text">Wellness<span>Wheel</span></div>
-                    </div>
-                    <p class="footer-about">WellnessWheel is India's leading at-home diagnostic service provider, committed to making healthcare accessible, affordable, and convenient for all.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="service.php">Services</a></li>
-                        <li><a href="career.php">Careers</a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-4 mb-5 mb-md-0">
-                    <h3 class="footer-heading">Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="service.php">Full Body Checkup</a></li>
-                        <li><a href="service.php">Neurological Tests</a></li>
-                        <li><a href="service.php">Cardiac & Pulmonary Tests</a></li>
-                        <li><a href="service.php">Allergy Sensitivity Panel</a></li>
-                        <li><a href="service.php">Fever & Infection Panel</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-4">
-                    <h3 class="footer-heading">Contact Us</h3>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="footer-contact-text">
-                            D-1/147 New Kondli, Mayur Vihar Phase 3, Delhi 110096
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="footer-contact-text">
-                            <a href="tel:+918076780562">+91 8076780562</a>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="footer-contact-text">
-                            <a href="mailto:info@wellnesswheel.in">info@wellnesswheel.in</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2023 WellnessWheel. All Rights Reserved. Designed by <a href="#">WellnessWheel Team</a>
-            </div>
-        </div>
-    </footer>
+     <!-- Footer Section -->
+     <?php include "include/footer.php"?>
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">
@@ -1505,7 +1411,7 @@
                 }
             });
         }
-        
+
         // Initialize Bootstrap Modal
         const modal = new bootstrap.Modal(applicationModal);
         

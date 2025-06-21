@@ -70,73 +70,7 @@
             to { transform: rotate(360deg); }
         }
         
-        /* Navbar */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 15px 0;
-            transition: all 0.4s ease;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-        }
-        
-        .navbar.scrolled {
-            padding: 10px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-        }
-        
-        .navbar-brand img {
-            height: 90px;
-            width: auto;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-            transition: all 0.3s;
-        }
-        
-        .navbar-brand:hover img {
-            transform: scale(1.05);
-        }
-        
-        .nav-link {
-            color: var(--primary) !important;
-            font-weight: 600;
-            margin: 0 12px;
-            position: relative;
-            transition: all 0.3s;
-            padding: 8px 0;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            background: var(--secondary);
-            bottom: 0;
-            left: 0;
-            border-radius: 10px;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: var(--secondary) !important;
-        }
-        
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
-        }
-        
-        .nav-link.active {
-            color: var(--secondary) !important;
-        }
-        
-
-        option{
-            color:black;
-        }
+       
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -1273,6 +1207,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -1285,35 +1220,10 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="logo.png" alt="WellnessWheel Logo" class="img-fluid">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.php">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#appointment">Appointment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a href="#appointment" class="btn btn-custom">
-                            <i class="fas fa-calendar-check btn-icon"></i> Book Now
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include "include/header.php"?>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
+    <section class="hero-section mt-4" id="home">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
@@ -1806,7 +1716,7 @@
                                 <span><i class="fas fa-graduation-cap"></i> B.Sc. MLT</span>
                             </div>
                             <p>We're looking for skilled Medical Lab Technicians to join our growing team. The ideal candidate will have experience in blood collection and processing various diagnostic tests.</p>
-                            <button class="btn btn-sm btn-outline-primary">Apply Now</button>
+                            <!-- <button class="btn btn-sm btn-outline-primary">Apply Now</button> -->
                         </div>
                         <div class="job-item">
                             <h5>EEG Technician</h5>
@@ -1816,7 +1726,7 @@
                                 <span><i class="fas fa-graduation-cap"></i> Diploma/Certificate in EEG</span>
                             </div>
                             <p>Join our specialized team of EEG technicians to conduct neurological tests at patients' homes. Experience with portable EEG equipment is required.</p>
-                            <button class="btn btn-sm btn-outline-primary">Apply Now</button>
+                            <!-- <button class="btn btn-sm btn-outline-primary">Apply Now</button> -->
                         </div>
                         <div class="job-item">
                             <h5>Customer Service Representative</h5>
@@ -1826,7 +1736,7 @@
                                 <span><i class="fas fa-graduation-cap"></i> Any Graduate</span>
                             </div>
                             <p>We're seeking customer-focused individuals to handle appointment scheduling, patient inquiries, and provide exceptional service to our clients.</p>
-                            <button class="btn btn-sm btn-outline-primary">Apply Now</button>
+                            <!-- <button class="btn btn-sm btn-outline-primary">Apply Now</button> -->
                         </div>
                     </div>
                 </div>
@@ -1839,64 +1749,7 @@
     </div>
 
     <!-- Footer Section -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="footer-logo">
-                        <img src="logo.png" alt="WellnessWheel Logo" class="footer-logo-img">
-                        <div class="footer-logo-text">Wellness<span>Wheel</span></div>
-                    </div>
-                    <p class="footer-about">WellnessWheel is India's leading at-home diagnostic service provider, delivering accurate and timely health testing with utmost convenience.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-2 mb-4">
-                    <h5 class="footer-heading">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#careers">Careers</a></li>
-                        <li><a href="#appointment">Book Appointment</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="footer-heading">Our Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="#services">Blood Tests</a></li>
-                        <li><a href="#services">Neurological Tests</a></li>
-                        <li><a href="#services">Cardiac Tests</a></li>
-                        <li><a href="#services">Pulmonary Tests</a></li>
-                        <li><a href="#services">Sleep Studies</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="footer-heading">Contact Us</h5>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="footer-contact-text">D-1/147 New Kondli Mayur Vihar Phase 3 , Delhi 110096</div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="footer-contact-text"><a href="tel:+918076780562">+91-8076780562</a></div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="footer-contact-text"><a href="mailto:support@wellnesswheel.in">support@wellnesswheel.in</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2025 WellnessWheel Diagnostics. All Rights Reserved. Designed by <a href="#">Team Wellness</a>
-            </div>
-        </div>
-    </footer>
+    <?php include "include/footer.php"?>
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>

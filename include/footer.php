@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 WellnessWheel Diagnostics. All Rights Reserved. Designed by <a href="#">Team Wellness</a>
+                &copy; 2025 WellnessWheel Diagnostics. All Rights Reserved. Designed by <a href="https://elitecorporatesolutions.com">Elite Corporate Solutions</a>
             </div>
         </div>
     </footer>

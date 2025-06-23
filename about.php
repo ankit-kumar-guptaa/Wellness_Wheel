@@ -1060,7 +1060,7 @@
                 
                 <div class="timeline-item timeline-right" data-aos="fade-left">
                     <div class="timeline-content">
-                        <div class="timeline-year">2023</div>
+                        <div class="timeline-year">2024</div>
                         <h4 class="timeline-title">Digital Transformation</h4>
                         <p class="timeline-text">Launched our mobile app and digital health records system, enabling seamless booking and access to test results.</p>
                     </div>
@@ -1068,9 +1068,9 @@
                 
                 <div class="timeline-item timeline-left" data-aos="fade-right">
                     <div class="timeline-content">
-                        <div class="timeline-year">2024</div>
+                        <div class="timeline-year">2025</div>
                         <h4 class="timeline-title">Present Day</h4>
-                        <p class="timeline-text">Now serving 50+ cities with 500+ certified technicians, having conducted over 1 million tests for 50,000+ satisfied patients.</p>
+                        <p class="timeline-text">Now 50+ certified technicians, having conducted over 1 million tests for 5,000+ satisfied patients.</p>
                     </div>
                 </div>
             </div>

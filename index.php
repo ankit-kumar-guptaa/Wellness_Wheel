@@ -945,7 +945,7 @@
         .footer-logo-img {
             height: 60px;
             margin-right: 15px;
-            filter: brightness(0) invert(1);
+            /* filter: brightness(0) invert(1); */
         }
         
         .footer-logo-text {

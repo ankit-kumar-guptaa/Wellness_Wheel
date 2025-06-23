@@ -1088,14 +1088,14 @@
                         <h3 class="cv-title">Join Our Growing Team</h3>
                         <p class="cv-description">At WellnessWheel, we're always on the lookout for talented, passionate individuals who share our commitment to making healthcare accessible and convenient for all. Whether you're a healthcare professional, technician, customer service expert, or have other skills to contribute, we'd love to hear from you.</p>
                         
-                        <a href="mailto:info@wellnesswheel.in" class="cv-email">
-                            <i class="fas fa-envelope"></i> info@wellnesswheel.in
+                        <a href="mailto:info@wellnesswheels.in" class="cv-email">
+                            <i class="fas fa-envelope"></i> info@wellnesswheels.in
                         </a>
                         
                         <p class="cv-description">Please include your updated CV/resume in PDF format, a brief cover letter explaining your interest in joining WellnessWheel, the position you're interested in (if any specific role), and your contact information.</p>
                         
                         <div class="mt-4">
-                            <a href="mailto:info@wellnesswheel.in" class="btn btn-custom">
+                            <a href="mailto:info@wellnesswheels.in" class="btn btn-custom">
                                 <i class="fas fa-paper-plane btn-icon"></i> Email Your CV Now
                             </a>
                             <button class="btn btn-custom-outline ms-3" data-bs-toggle="modal" data-bs-target="#applicationModal">
@@ -1223,7 +1223,7 @@
                         <a href="#apply-now" class="btn btn-custom-outline">
                             <i class="fas fa-paper-plane btn-icon"></i> Submit Your CV
                         </a>
-                        <a href="mailto:info@wellnesswheel.in" class="btn btn-custom-outline">
+                        <a href="mailto:info@wellnesswheels.in" class="btn btn-custom-outline">
                             <i class="fas fa-envelope btn-icon"></i> Email Us Directly
                         </a>
                     </div>

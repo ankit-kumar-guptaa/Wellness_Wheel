@@ -1458,22 +1458,22 @@
                     <div class="col-lg-6">
                         <div class="appointment-form">
                             <h3 class="text-center">Book Your Test Now</h3>
-                            <form id="appointmentForm">
+                            <form id="appointmentForm" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Full Name</label>
-                                        <input type="text" class="form-control" placeholder="Enter your name" required>
+                                        <input type="text" name="fullName" class="form-control" placeholder="Enter your name" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" placeholder="Enter your number" required>
+                                        <input type="tel" name="phoneNumber" class="form-control" placeholder="Enter your number" required>
                                     </div>
                                 </div>
                                 <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <input type="email" name="email" class="form-control" placeholder="Enter your email">
                                 
                                 <label class="form-label">Select Test Type</label>
-                                <select class="form-control" required>
+                                <select name="testType" class="form-control" required>
                                     <option value="" disabled selected>Choose a test</option>
                                     <option>Blood Test - Basic Package</option>
                                     <option>Blood Test - Advanced Package</option>
@@ -1488,11 +1488,11 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Preferred Date</label>
-                                        <input type="date" class="form-control" required>
+                                        <input type="date" name="preferredDate" class="form-control" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Preferred Time</label>
-                                        <select class="form-control" required>
+                                        <select name="preferredTime" class="form-control" required>
                                             <option value="" disabled selected>Select time</option>
                                             <option>7:00 AM - 9:00 AM</option>
                                             <option>9:00 AM - 11:00 AM</option>
@@ -1505,7 +1505,9 @@
                                 </div>
                                 
                                 <label class="form-label">Special Instructions (if any)</label>
-                                <textarea class="form-control" rows="3" placeholder="Any specific requirements or medical conditions"></textarea>
+                                <textarea name="specialInstructions" class="form-control" rows="3" placeholder="Any specific requirements or medical conditions"></textarea>
+                                
+                                <div id="formMessage" class="alert mt-3" style="display: none;"></div>
                                 
                                 <button type="submit" class="btn btn-custom w-100 mt-4">
                                     <i class="fas fa-check-circle btn-icon"></i> Confirm Appointment
@@ -1742,7 +1744,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="mailto:careers@wellnesswheel.in" class="btn btn-primary">Email Your Resume</a>
+                    <a href="mailto:info@wellnesswheels.in" class="btn btn-primary">Email Your Resume</a>
                 </div>
             </div>
         </div>
@@ -1823,12 +1825,57 @@
             });
         });
 
-        // Appointment Form Submission (Mock)
+        // Appointment Form Submission with AJAX
         const appointmentForm = document.getElementById('appointmentForm');
+        const formMessage = document.getElementById('formMessage');
+        
         appointmentForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Appointment booked successfully! You will receive a confirmation soon.');
-            appointmentForm.reset();
+            
+            // Show loading message
+            formMessage.className = 'alert alert-info mt-3';
+            formMessage.style.display = 'block';
+            formMessage.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing your appointment request...';
+            
+            // Collect form data
+            const formData = new FormData(appointmentForm);
+            
+            // Send AJAX request
+            fetch('process_appointment.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Success message
+                    formMessage.className = 'alert alert-success mt-3';
+                    formMessage.innerHTML = '<i class="fas fa-check-circle"></i> ' + data.message;
+                    appointmentForm.reset();
+                } else {
+                    // Error message
+                    formMessage.className = 'alert alert-danger mt-3';
+                    
+                    if (data.errors && Array.isArray(data.errors)) {
+                        // Display validation errors
+                        let errorHtml = '<i class="fas fa-exclamation-circle"></i> Please correct the following errors:<ul>';
+                        data.errors.forEach(error => {
+                            errorHtml += `<li>${error}</li>`;
+                        });
+                        errorHtml += '</ul>';
+                        formMessage.innerHTML = errorHtml;
+                    } else {
+                        // Display general error message
+                        formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> ' + (data.message || 'An error occurred. Please try again.');
+                    }
+                }
+            })
+            .catch(error => {
+                // Network or other error
+                formMessage.className = 'alert alert-danger mt-3';
+                formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> An error occurred. Please try again later.';
+                console.error('Error:', error);
+            });
         });
 
         // Smooth Scroll for Anchor Links

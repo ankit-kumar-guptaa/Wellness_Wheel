@@ -48,7 +48,7 @@
                     </div>
                     <div class="footer-contact-item">
                         <div class="footer-contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="footer-contact-text"><a href="mailto:support@wellnesswheel.in">support@wellnesswheel.in</a></div>
+                        <div class="footer-contact-text"><a href="mailto:info@wellnesswheels.in">info@wellnesswheels.in</a></div>
                     </div>
                 </div>
             </div>

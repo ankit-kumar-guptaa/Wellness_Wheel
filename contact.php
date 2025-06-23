@@ -653,8 +653,8 @@
                         </div>
                         <h4 class="contact-info-title">Email Us</h4>
                         <p class="contact-info-text">
-                            <a href="mailto:support@wellnesswheel.in">support@wellnesswheel.in</a><br>
-                            <a href="mailto:info@wellnesswheel.in">info@wellnesswheel.in</a>
+                            <!-- <a href="mailto:support@wellnesswheel.in">support@wellnesswheel.in</a><br> -->
+                            <a href="mailto:info@wellnesswheels.in">info@wellnesswheels.in</a>
                         </p>
                     </div>
                 </div>
@@ -810,4 +810,3 @@
         });
     </script>
 </body>
-</html>

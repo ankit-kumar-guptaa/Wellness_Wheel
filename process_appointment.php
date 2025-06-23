@@ -1,4 +1,9 @@
 <?php
+// Import PHPMailer classes
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
@@ -30,11 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Note: You need to install PHPMailer using Composer first
         // Run: composer require phpmailer/phpmailer
         require 'vendor/autoload.php';
-        
-        // Import PHPMailer classes
-        use PHPMailer\PHPMailer\PHPMailer;
-        use PHPMailer\PHPMailer\SMTP;
-        use PHPMailer\PHPMailer\Exception;
         
         // Create a new PHPMailer instance
         $mail = new PHPMailer(true);

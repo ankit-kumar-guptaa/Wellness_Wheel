@@ -669,17 +669,17 @@
                         <h3 class="contact-form-title">Get In Touch</h3>
                         <p class="contact-form-subtitle">Have questions about our services? Fill out the form below and our team will get back to you within 24 hours.</p>
                         
-                        <form id="contactForm">
+                        <form id="contactForm" method="post">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
@@ -687,14 +687,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" placeholder="Your Phone">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone" required>
                                         <label for="phone">Your Phone</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select" id="subject">
-                                            <option selected disabled>Select Subject</option>
+                                        <select class="form-select" id="subject" name="subject" required>
+                                            <option value="" selected disabled>Select Subject</option>
                                             <option value="General Inquiry">General Inquiry</option>
                                             <option value="Test Booking">Test Booking</option>
                                             <option value="Report Query">Report Query</option>
@@ -706,9 +706,10 @@
                                 </div>
                             </div>
                             <div class="form-floating">
-                                <textarea class="form-control" id="message" placeholder="Your Message" style="height: 150px"></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Your Message" style="height: 150px" required></textarea>
                                 <label for="message">Your Message</label>
                             </div>
+                            <div id="formMessage" class="alert mt-3" style="display: none;"></div>
                             <div class="mt-4 text-center">
                                 <button type="submit" class="btn btn-submit">
                                     <i class="fas fa-paper-plane me-2"></i> Send Message
@@ -801,12 +802,57 @@
             });
         });
 
-        // Contact Form Submission (Mock)
+        // Contact Form Submission with AJAX
         const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
+            
+            // Show loading message
+            formMessage.className = 'alert alert-info mt-3';
+            formMessage.style.display = 'block';
+            formMessage.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending your message...';
+            
+            // Collect form data
+            const formData = new FormData(contactForm);
+            
+            // Send AJAX request
+            fetch('process_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Success message
+                    formMessage.className = 'alert alert-success mt-3';
+                    formMessage.innerHTML = '<i class="fas fa-check-circle"></i> ' + data.message;
+                    contactForm.reset();
+                } else {
+                    // Error message
+                    formMessage.className = 'alert alert-danger mt-3';
+                    
+                    if (data.errors && Array.isArray(data.errors)) {
+                        // Display validation errors
+                        let errorHtml = '<i class="fas fa-exclamation-circle"></i> Please correct the following errors:<ul>';
+                        data.errors.forEach(error => {
+                            errorHtml += `<li>${error}</li>`;
+                        });
+                        errorHtml += '</ul>';
+                        formMessage.innerHTML = errorHtml;
+                    } else {
+                        // Display general error message
+                        formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> ' + (data.message || 'An error occurred. Please try again.');
+                    }
+                }
+            })
+            .catch(error => {
+                // Network or other error
+                formMessage.className = 'alert alert-danger mt-3';
+                formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> An error occurred. Please try again later.';
+                console.error('Error:', error);
+            });
         });
     </script>
 </body>

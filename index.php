@@ -70,7 +70,9 @@
             to { transform: rotate(360deg); }
         }
         
-       
+       option{
+        color: black;
+       }
         /* Hero Section */
         .hero-section {
             position: relative;
